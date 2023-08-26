@@ -1,3 +1,3 @@
-# SQL-PROJECT--GLOBAL-DEFORESTATION
+# SQL-PROJECT-- **GLOBAL DEFORESTATION**
 
-![]()
+![](Deforestation.png)
