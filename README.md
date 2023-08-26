@@ -24,6 +24,7 @@ We've 3 datasets to wrok with, namely;
 - Update rounded off and zero value data into existing table
 
 ## Solutions
+
 _**Land_area table before**_
 
 ![](LAND_AREA_BFR_UPDATE.png)
@@ -32,6 +33,7 @@ _rounding off to whole_no_ **AND** _updating into existing table_
 I use the syntax: SELECT ROUND(TOTAL_AREA_SQ_MI, 0)
 
 _Update into existing table_
+
 I used syntax: UPDATE LAND_AREA SET TOTAL_AREA_SQ_MI= ROUND(TOTAL_AREA_SQ_MI, 0)
 
 ![](LAND_AREA_AFTER_UPDATE1.png)
@@ -44,6 +46,7 @@ _rounding off to whole_no_ **AND** _updating into existing table_
 I use the syntax: SELECT ROUND(FOREST_AREA_SQKM, 0)
 
 _Update into existing table_
+
 I used syntax: UPDATE FOREST_AREA SET FOREST_AREA_SQKM= ROUND(FOREST_AREA_SQKM, 0)
 
 ![](FOREST_AREA_AFTER_UPDATE.png)
@@ -55,7 +58,8 @@ _**Forest_area table with NULL**_
 _**Modifying Null to zero(0) for Forest Area**_
 I used syntax: SELECT ISNULL(FOREST_AREA_SQKM, 0) FROM FOREST_AREA
 
-Update into existing table
+_Update into existing table_
+
 I use syntax: UPDATE FOREST_AREA SET FOREST_AREA_SQKM= ISNULL(FOREST_AREA_SQKM, 0)
 
 ![](FOREST_AREA_SQKM_NULL_UPDATE.png)
