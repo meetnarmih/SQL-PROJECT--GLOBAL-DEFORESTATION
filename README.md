@@ -21,19 +21,44 @@ We've 3 datasets to wrok with, namely;
 ## Skills Demonstrated to modify Land_area & Forest_area
 - Rounding off to whole number 
 - Modifying Null to zero(0)
-- Update rounded off/zero value data into existing table
+- Update rounded off and zero value data into existing table
 
 ## Solutions
-**Land_area table before**
+_**Land_area table before**_
 
-![](land_area_bfr_update.png)
+![](LAND_AREA_BFR_UPDATE.png)
 
+_rounding off to whole_no_ **AND** _updating into existing table_
+I use the syntax: SELECT ROUND(TOTAL_AREA_SQ_MI, 0)
 
+_Update into existing table_
+I used syntax: UPDATE LAND_AREA SET TOTAL_AREA_SQ_MI= ROUND(TOTAL_AREA_SQ_MI, 0)
 
+![](LAND_AREA_AFTER_UPDATE1.png)
 
+_**Forest_area table before**_
 
+![](FOREST_AREA_BFR_UPDATE.png)
 
+_rounding off to whole_no_ **AND** _updating into existing table_
+I use the syntax: SELECT ROUND(FOREST_AREA_SQKM, 0)
 
+_Update into existing table_
+I used syntax: UPDATE FOREST_AREA SET FOREST_AREA_SQKM= ROUND(FOREST_AREA_SQKM, 0)
+
+![](FOREST_AREA_AFTER_UPDATE.png)
+
+_**Forest_area table with NULL**_
+
+![](FOREST_AREA_WITH_NULL.png)
+
+_**Modifying Null to zero(0) for Forest Area**_
+I used syntax: SELECT ISNULL(FOREST_AREA_SQKM, 0) FROM FOREST_AREA
+
+Update into existing table
+I use syntax: UPDATE FOREST_AREA SET FOREST_AREA_SQKM= ISNULL(FOREST_AREA_SQKM, 0)
+
+![](FOREST_AREA_SQKM_NULL_UPDATE.png)
 
 ## Problem statement
 1. Find the total number of countries involved in deforestation.
