@@ -73,7 +73,11 @@ I use syntax: UPDATE FOREST_AREA SET FOREST_AREA_SQKM= ISNULL(FOREST_AREA_SQKM, 
 6. Calculate the average total area (in square miles) for countries in the "Upper Middle Income" income group? 
  compare the result with the rest of the income categories.
 
+## Skills Demonstrated
 
+## Solutions/Analysis
+
+**1. Find the total number of countries involved in deforestation.**
 
 
 
