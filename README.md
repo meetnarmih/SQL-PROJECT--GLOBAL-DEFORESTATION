@@ -102,6 +102,6 @@ INNER JOIN Regions and Forest_area table, used ROW_NUMBER() to assign unique num
 
  **5. Retrieve the names of countries that have a forest area (in square kilometers) greater than the average forest area of all countries in the "High Income" income group:**
 Firstly, calculate the average total area for all categories, after which i filtered using WHERE clause to retrieve names of countries greater than the average forest area in 'High Income' Group.
-AVG_SQKM ALL CATEGORIES                           |                  RETRIEVED COUNTRY_NAME GREATER THAN AVG HIGH INCOME
-:---------------------------:                     |         :----------------------------------------------------------------:
-  ![](AVG_SQKM.png)                               |                                   ![](NAME_COUN_GREATER_HI.png)
+AVG_SQKM ALL CATEGORIES                       |                  RETRIEVED COUNTRY_NAME GREATER THAN AVG HIGH INCOME
+:--------------------------------------------:|:--------------------------------------------------------------------------:
+  ![](AVG_SQKM.png)                           |                                   ![](NAME_COUN_GREATER_HI.png)
