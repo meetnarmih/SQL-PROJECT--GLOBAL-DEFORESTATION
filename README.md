@@ -74,10 +74,17 @@ I use syntax: UPDATE FOREST_AREA SET FOREST_AREA_SQKM= ISNULL(FOREST_AREA_SQKM, 
  compare the result with the rest of the income categories.
 
 ## Skills Demonstrated
+- Aggregate Function(average)
+- Windows Function(Row_Number)
+
 
 ## Solutions/Analysis
 
-**1. Find the total number of countries involved in deforestation.**
+**1. Find the total number of countries involved in deforestation:**
+I used Row_Number() function to assign unique sequential number to each rows then Over(order by the country_name) in Regions Table
 
+![](Total_number_coun.png)
+
+ 
 
 
