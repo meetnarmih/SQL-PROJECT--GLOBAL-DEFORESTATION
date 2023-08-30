@@ -68,8 +68,10 @@ I use syntax: UPDATE FOREST_AREA SET FOREST_AREA_SQKM= ISNULL(FOREST_AREA_SQKM, 
 1. Find the total number of countries involved in deforestation.
 2. Show the income groups of countries having total area ranging from 75,000 to 150,000?
 3. What are the countries from each region or continent having the highest total forest area?
-4. Determine the total forest area (in square kilometers) for countries in the "High Income" income group? Also compare with the other income categories. 
-5. Retrieve the names of countries that have a forest area (in square kilometers) greater than the average forest area of all countries in the "High Income" income group.
+4. Determine the total forest area (in square kilometers) for countries in the "High Income" income group?
+   Also compare with the other income categories.
+5. Retrieve the names of countries that have a forest area (in square kilometers)
+   greater than the average forest area of all countries in the "High Income" income group.
 6. Calculate the average total area (in square miles) for countries in the "Upper Middle Income" income group? 
  compare the result with the rest of the income categories.
 
@@ -92,12 +94,15 @@ I joined Regions and Land_area then used BETWEEEN operator to check range of val
 ![](Totalarea_ranging_75,000.png)
 
 
-**3. Countries from each region or continent having the highest total forest area?:** 
-INNER JOIN Regions and Land_area table, used ROW_NUMBER() to assign unique number then Over(Partition) by Regions. Then Sub-queried to return regions with highest total forest area.
+**3. Countries from each region or continent having the highest total forest area:** 
+INNER JOIN Regions and Forest_area table, used ROW_NUMBER() to assign unique number then Over(Partition) by Regions. Then Sub-queried to return regions with highest total forest area.
 
 ![](COUN_REGION_WT_HIGHEST.png)
 
 
- 
+ **5. Retrieve the names of countries that have a forest area (in square kilometers) greater than the average forest area of all countries in the "High Income" income group:**
+Firstly, calculate the average total area for all categories, after which i filtered using WHERE clause to retrieve names of countries greater than the average forest area in 'High Income' Group.
+
+   ![](AVG_SQKM.png)                                                                                                                                              ![](NAME_COUN_GREATER_HI.png)
 
 
