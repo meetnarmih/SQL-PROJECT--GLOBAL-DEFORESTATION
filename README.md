@@ -67,15 +67,16 @@ I use syntax: UPDATE FOREST_AREA SET FOREST_AREA_SQKM= ISNULL(FOREST_AREA_SQKM, 
 ## Problem statement
 1. Find the total number of countries involved in deforestation.
 2. Show the income groups of countries having total area ranging from 75,000 to 150,000?
-3. Determine the total forest area (in square kilometers) for countries in the "High Income" income group? Also compare with the other income categories.
-4. What are the countries from each region or continent having the highest total forest area?
+3. What are the countries from each region or continent having the highest total forest area?
+4. Determine the total forest area (in square kilometers) for countries in the "High Income" income group? Also compare with the other income categories. 
 5. Retrieve the names of countries that have a forest area (in square kilometers) greater than the average forest area of all countries in the "High Income" income group.
 6. Calculate the average total area (in square miles) for countries in the "Upper Middle Income" income group? 
  compare the result with the rest of the income categories.
 
 ## Skills Demonstrated
 - Aggregate Function(average)
-- Windows Function(Row_Number)
+- Row_Number()
+- Inner Join
 
 
 ## Solutions/Analysis
@@ -84,6 +85,18 @@ I use syntax: UPDATE FOREST_AREA SET FOREST_AREA_SQKM= ISNULL(FOREST_AREA_SQKM, 
 I used Row_Number() function to assign unique sequential number to each rows then Over(order by the country_name) in Regions Table
 
 ![](Total_number_coun.png)
+
+**2. Income groups of countries having total area ranging from 75,000 to 150,000:**
+I joined Regions and Land_area then used BETWEEEN operator to check range of value(75k-150k)
+
+![](Totalarea_ranging_75,000.png)
+
+
+**3. Countries from each region or continent having the highest total forest area?:** 
+INNER JOIN Regions and Land_area table, used ROW_NUMBER() to assign unique number then Over(Partition) by Regions. Then Sub-queried to return regions with highest total forest area.
+
+![](COUN_REGION_WT_HIGHEST.png)
+
 
  
 
